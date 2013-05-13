@@ -1,7 +1,8 @@
 
+I am pretty new to PHP and most coding in general. This is my first attempt to make a contribiution to any 
+kind of open source projects. I figured the best way to learn would be to branch off of a project and get started. 
 
-**** I am pretty new to PHP and most coding in general. This is my first attempt to make a contribiution to any 
-kind of open source projects. please feel free to leave comments, questions, etc... ****
+please feel free to leave me comments, suggestions, questions, etc... 
 
 
 multi-gallery-example
