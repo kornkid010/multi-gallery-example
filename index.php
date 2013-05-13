@@ -18,9 +18,20 @@
     
     <script type="text/javascript">
     $(document).ready(function(){
-        $("a[rel='cats']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});
-        $("a[rel='dogs']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});
-        $("a[rel='misc']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});
+ <?php
+     
+    chdir('../multi-gallery-example/galleries/');
+
+    $dirs =  glob('*', GLOB_ONLYDIR);
+
+    foreach($dirs as $val)   
+
+    {
+    echo('$("a[rel=' . $val . ']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});');
+    }
+
+    chdir('../') 
+?> 
     });
     </script>
     
