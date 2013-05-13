@@ -18,20 +18,9 @@
     
     <script type="text/javascript">
     $(document).ready(function(){
- <?php
-     
-    chdir('../multi-gallery-example/galleries/');
-
-    $dirs =  glob('*', GLOB_ONLYDIR);
-
-    foreach($dirs as $val)   
-
-    {
-    echo('$("a[rel=' . $val . ']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});');
-    }
-
-    chdir('../') 
-?> 
+        $("a[rel='cats']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});
+        $("a[rel='dogs']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});
+        $("a[rel='misc']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});
     });
     </script>
     
@@ -52,7 +41,7 @@
             cycle images within their sections.  You can view the underlying code for this page
             <a href="https://github.com/UberGallery/multi-gallery-example">on the UberGallery Github page</a>.
         </p>
-
+        
         <?php $files = scandir('galleries'); ?>
         <?php foreach ($files as $file): ?>
             
