@@ -26,6 +26,7 @@ changes:
 'galleries' folder. 
 
 5/14
+
 2. fixed a bug where color box wont work if one of the galleries created has a space in the name.
 3. added the start to the admin panel. access at http://trend-source.com/multi-gallery-example/admin/ email me if you
 want the user/pw to test the gallery creation and upload. 
