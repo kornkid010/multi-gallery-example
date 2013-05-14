@@ -1,4 +1,3 @@
-
 I am pretty new to PHP and most coding in general. This is my first attempt to make a contribiution to any 
 kind of open source projects. I figured the best way to learn would be to branch off of a project and get started. 
 
@@ -25,3 +24,8 @@ changes:
 
 1. Automatically populates the value for "rel" in color box, based on the directories that are created in the
 'galleries' folder. 
+
+5/14
+2. fixed a bug where color box wont work if one of the galleries created has a space in the name.
+3. added the start to the admin panel. access at http://trend-source.com/multi-gallery-example/admin/ email me if you
+want the user/pw to test the gallery creation and upload. 
