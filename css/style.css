@@ -85,3 +85,74 @@ p {
 .textRight {
 	text-align: right;
 }
+/* -------------------------------------------------------------------------- */
+/* -----| ADMIN PANEL|---------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+#menu
+ul
+{
+  font-size: 16px;
+    list-style:none;
+    margin:0;
+    padding:50PX;
+    text-align:center;
+text-transform:uppercase;
+font-family:"Trebuchet MS";
+letter-spacing:4px;
+}
+
+#menu li
+{
+  display:inline;
+     margin:12px;
+}
+
+  #menu a {
+ color: #000;
+ cursor: pointer;
+ height:25px;
+ line-height: 25px;
+ text-indent: 10px;
+ text-decoration:none;
+ width:100%;
+}
+ 
+#menu a:hover{
+/*  text-decoration:underline; */
+ color: #A9C5EB;
+ font-weight: bold;
+}
+ 
+#menu li:hover {
+color: #A9C5EB;
+ position: relative;
+}
+
+a {
+  color: #00F;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#upload 
+  {
+width: 400px;
+height: 150px;
+background-color: #CCC;
+margin: 0 auto;
+text-align: left;
+padding: 20px;
+
+
+ }
+
+form
+{
+
+}
+ 
+ 

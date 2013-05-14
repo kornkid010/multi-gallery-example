@@ -27,7 +27,7 @@
     foreach($dirs as $val)   
 
     {
-    echo('$("a[rel=' . $val . ']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});');
+    echo('$("a[rel=\''.$val.'\']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});');
     }
 
     chdir('../') 
