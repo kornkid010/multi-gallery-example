@@ -19,9 +19,9 @@
 		<div id="nav">			
 			<div id="menu">
 				<ul>
-					<li><a href="#">Home</a></li>
+
 					<li><a href="../index.php">gallery</a></li>
-					<li><a href="/admin/">Admin</a></li>
+					<li><a href="/admin/index.php">Admin</a></li>
 				</ul>
 			</div>	
 		</div>
@@ -60,6 +60,51 @@
 
 				<input type="file" name="files[]" multiple id="file"><br>
 				<input type="submit" name="submit" value="Upload">
+				</form>
+
+			</div>
+
+				<h2> Delete Photos</h2>
+			<div class= "right1" id="upload">
+			 
+				<form action="deletephoto.php" method="post"
+				enctype="multipart/form-data"> 
+				
+				<select name="myDirs">
+				<option value="" selected="selected">Select existing gallery:</option>
+				<?php
+				$dirs = glob("../galleries/*", GLOB_ONLYDIR);
+				foreach($dirs as $val){
+				echo '<option value="'.$val.'">'.$val."</option>\n";
+				}
+				?>
+				</select>
+
+	
+				<input type="submit" name="submit1" value="Open gallery">
+				</form>
+
+			</div>
+
+        				<h2> Delete Gallery</h2>
+			<div class= "right1" id="upload">
+                <p> Gallery must be empty before it can be deleted </p>
+			 
+				<form action="deletegal.php" method="post"
+				enctype="multipart/form-data"> 
+				
+				<select name="myDir">
+				<option value="" selected="selected">Select existing gallery:</option>
+				<?php
+				$dirs = glob("../galleries/*", GLOB_ONLYDIR);
+				foreach($dirs as $val){
+				echo '<option value="'.$val.'">'.$val."</option>\n";
+				}
+				?>
+				</select>
+
+
+				<input type="submit" name="submit" value="Delete gallery">
 				</form>
 
 			</div>

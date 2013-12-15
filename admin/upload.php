@@ -1,38 +1,48 @@
- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-        "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-<title> Admin Panel </title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="../css/style.css" />
-<link rel="shortcut icon" href="images/favicon.png" />
-</head>
-
-
-
-<body>
+  <head>
+    <title>
+      Admin Panel 
+    </title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+  </head>
+  
+  
+  
+  <body>
 	<div class="pageWrap">
-	
-	
-        <h1 id="pageTitle">Gallery Demo Admin panel</h1>
-		
+      
+      
+      <h1 id="pageTitle">
+        Gallery Demo Admin panel
+      </h1>
+      
 		<div id="nav">			
 			<div id="menu">
 				<ul>
-					<li><a href="#">Home</a></li>
+
 					<li><a href="../index.php">gallery</a></li>
-					<li><a href="/admin/">Admin</a></li>
+					<li><a href="/admin/index.php">Admin</a></li>
 				</ul>
 			</div>	
 		</div>
-
-
-
-
-		<div id="upload">
-
-		<h1> Upload Results</h1>
+      
+      
+      
+      
+      <div id="upload">
+        
+		<h1>
+          Upload Results
+        </h1>
 				<?php
+        //source code for upload script:
+
+        // http://techstream.org/Web-Development/PHP/Multiple-File-Upload-with-PHP-and-MySQL
+
 				if(isset($_FILES['files'])){
 					$errors= array();
 					foreach($_FILES['files']['tmp_name'] as $key => $tmp_name ){
@@ -40,7 +50,7 @@
 						$file_size =$_FILES['files']['size'][$key];
 						$file_tmp =$_FILES['files']['tmp_name'][$key];
 						$file_type=$_FILES['files']['type'][$key];	
-						$extensions = array("jpeg","jpg","png"); 
+						$extensions = array("jpeg","jpg","png","gif"); 
 						
 						if($file_size > 6145724.908){
 							$errors[]='File size must be less than 5 MB';
@@ -72,12 +82,12 @@
 					}
 				}
 				?>
-		</div>
-
-
-</div>
-
-
-
-</body>
+      </div>
+      
+      
+    </div>
+    
+    
+    
+  </body>
 </html>

@@ -16,24 +16,24 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
     <script type="text/javascript" src="resources/colorbox/jquery.colorbox.js"></script>
     
-    <script type="text/javascript">
-    $(document).ready(function(){
- <?php
-     
-    chdir('../multi-gallery-example/galleries/');
-
+<script type="text/javascript">
+  $(document).ready(function(){
+    <?php
+      
+      
+      chdir('galleries');
     $dirs =  glob('*', GLOB_ONLYDIR);
-
-    foreach($dirs as $val)   
-
-    {
-    echo('$("a[rel=\''.$val.'\']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});');
+      
+      foreach($dirs as $val)   
+        
+        {
+          echo('$("a[rel=\''.$val.'\']").colorbox({maxWidth: "90%", maxHeight: "90%", opacity: ".5"});');
+        }
+      chdir('../');
+      ?> 
     }
-
-    chdir('../') 
-?> 
-    });
-    </script>
+  );
+</script>
     
     <?php if(file_exists('googleAnalytics.inc')) { include('googleAnalytics.inc'); } ?>
 
@@ -44,7 +44,7 @@
 
     <div class="pageWrap">
         
-        <h1 id="pageTitle">Multi-directory Gallery Demo</h1>
+        <h1 id="pageTitle">Multi-directory Gallery Demo </h1>
         
         <p>
             This is a demonstration of a multi-directory <a href="http://www.ubergallery.net">UberGallery</a> 
@@ -52,6 +52,14 @@
             cycle images within their sections.  You can view the underlying code for this page
             <a href="https://github.com/UberGallery/multi-gallery-example">on the UberGallery Github page</a>.
         </p>
+	
+					<div id="menu">
+				<ul>
+
+					<li><a href="index.php">gallery</a></li>
+					<li><a href="/admin/index.php">Admin</a></li>
+				</ul>
+			</div>	
         
         <?php $files = scandir('galleries'); ?>
         <?php foreach ($files as $file): ?>

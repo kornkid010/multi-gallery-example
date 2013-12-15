@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -20,7 +22,7 @@
       <h1 id="pageTitle">
         Gallery Demo Admin panel
       </h1>
-		
+      
 		<div id="nav">			
 			<div id="menu">
 				<ul>
@@ -30,30 +32,33 @@
 				</ul>
 			</div>	
 		</div>
+      
+      
+      
+      <div id="upload">
+        
+        <h1>
+          Results
+        </h1>
+        
+        
+        <?php
 
+//source code php script: 
+// http://www.techques.com/question/1-6359197/delete-selected-images-with-the-help-of-checkboxes
+$file      = $_REQUEST['imgfile'];
+$num_files = count($file);
+for ($i = 0; $i < $num_files; $i++) {
+    unlink("$file[$i]");
+}
+echo "Images successfully deleted.";
 
-
-		<div id="upload">
-
-			<h1>Results</h1>
-
-				<?php
-                $foldername = $_POST['destination'];
-
-				$path = '../galleries/' . $foldername;
-				mkdir($path);
-
-				if(file_exists($path) && is_dir($path)) {
-				 
-					echo "The gallery $foldername was successfully created!!! ";
-					exit;
-				} else {
-					echo "failed to create $foldername gallery!! ";
-				}
-				?> 
-		</div>
-
-</div>
-
-</body>
+?>
+          
+          
+      </div>
+      
+  </div>
+  
+  </body>
 </html>

@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -20,7 +22,7 @@
       <h1 id="pageTitle">
         Gallery Demo Admin panel
       </h1>
-		
+      
 		<div id="nav">			
 			<div id="menu">
 				<ul>
@@ -30,30 +32,37 @@
 				</ul>
 			</div>	
 		</div>
+      
+      
+      
+      <div id="upload">
+        
+        <h1>
+          Results
+        </h1>
+        
+        
+        <?php
+
+$dir = $_POST['myDir'];
 
 
 
-		<div id="upload">
+if (!rmdir($dir)) {
+    echo ("Could not remove the $dir gallery. You must delete all photos from the gallery before it can be deleted. Sorry for your bad luck. ");
+}
 
-			<h1>Results</h1>
+else {
+    echo (" Great success!!! $dir gallery has been deleted.");
+}
 
-				<?php
-                $foldername = $_POST['destination'];
-
-				$path = '../galleries/' . $foldername;
-				mkdir($path);
-
-				if(file_exists($path) && is_dir($path)) {
-				 
-					echo "The gallery $foldername was successfully created!!! ";
-					exit;
-				} else {
-					echo "failed to create $foldername gallery!! ";
-				}
-				?> 
-		</div>
-
-</div>
-
-</body>
+?>
+    
+         
+          
+      </div>
+      
+  </div>
+  
+  </body>
 </html>
